@@ -1,83 +1,74 @@
-<?php
-echo "<pre style='font-family: Consolas; font-size:14px;'>";
+<?php 
+// ACT 01 
+echo "ACTIVITY 1: BASIC OUTPUT <br>"; 
+echo "Name: Gerecho Yapla <br>"; 
+echo "Course: BSIT <br>"; 
+echo "Guide Questions:<br>"; 
+echo "1. Semicolon (;)<br>"; 
+echo "2. echo is faster than print<br>"; 
 
-echo "==============================\n";
-echo "ACTIVITY 1: BASIC OUTPUT\n";
-echo "==============================\n";
-echo "Name: Gerecho Yapla\n";
-echo "Course: BSIT\n\n";
+// ACT 02 
+echo "<br>"; 
+echo "ACTIVITY 2: MULTIPLE OUTPUT<br>"; 
+echo "Welcome!<br> This is PHP.<br> Enjoy coding!<br>"; 
+// Display 3 messages
+echo "No food but hungry?<br>"; 
+echo "Eat water and chew.<br>"; 
+echo "To fool your mind is to fool the food!<br><br>"; 
 
-echo "Guide Questions:\n";
-echo "1. Semicolon (;)\n";
-echo "2. echo is faster than print\n\n";
+// ACT 03 & 04
+echo "ACTIVITY 3 & 4: VARIABLES<br>"; 
+// variables 
+$name = "Maria"; 
+$age = 20; 
+// Fixed string concatenation formatting
+echo "Name: " . $name . "<br>"; 
+echo "Age: " . $age . "<br>"; 
 
+// Your own custom variables
+$name = "Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas"; 
+$age = 69; 
+echo "<br>Name: $name<br>"; 
+echo "Age: $age<br>"; 
 
-echo "==============================\n";
-echo "ACTIVITY 2: MULTIPLE OUTPUT\n";
-echo "==============================\n";
-echo "Welcome!\nThis is PHP.\nEnjoy coding!\n\n";
+// ACT 05
+echo "<br>ACTIVITY 5: ARITHMETIC<br>"; // Changed \n to <br> for web rendering
+$a = 10; 
+$b = 3; 
+echo "Addition: " . ($a + $b) . "<br>"; 
+echo "Subtraction: " . ($a - $b) . "<br>"; 
+echo "Multiplication: " . ($a * $b) . "<br>"; 
+echo "Division: " . ($a / $b) . "<br>"; 
 
-echo "Name: Gerecho Yapla\nCourse: BSIT\n\n";
+$a = 15; 
+$b = 2332124; 
+echo "<br>Addition: " . ($a + $b) . "<br>"; 
+echo "Subtraction: " . ($a - $b) . "<br>"; 
+echo "Multiplication: " . ($a * $b) . "<br>"; 
+echo "Division: " . ($a / $b) . "<br>"; 
 
-echo "No food but hungry?\n";
-echo "Eat water and chew.\n";
-echo "To fool your mind is to fool the food!\n\n";
+// ACTIVITY 6
+echo "<br>ACTIVITY 6: ASSIGNMENT<br>"; 
+$x = 5; 
+$x += 3; 
+echo "Result: $x<br>"; 
 
+// ACTIVITY 7
+echo "<br>ACTIVITY 7: COMPARISON<br>"; 
+$a = 10; 
+$b = 5; 
+echo "a > b: "; 
+var_dump($a > $b); 
+echo "<br>a == b: "; 
+var_dump($a == $b); 
+echo "<br>"; 
 
-echo "==============================\n";
-echo "ACTIVITY 3 & 4: VARIABLES\n";
-echo "==============================\n";
-$name = "Maria"; $age = 20;
-echo "Name: $name\nAge: $age\n\n";
-
-$name = "Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas";
-$age = 69;
-echo "Name: $name\nAge: $age\n\n";
-
-$name = "Ana"; $age = 18;
-echo "Corrected Age: $age\n\n";
-
-
-echo "==============================\n";
-echo "ACTIVITY 5: ARITHMETIC\n";
-echo "==============================\n";
-$a=10; $b=3;
-echo "Addition: ".($a+$b)."\n";
-echo "Subtraction: ".($a-$b)."\n";
-echo "Multiplication: ".($a*$b)."\n";
-echo "Division: ".($a/$b)."\n\n";
-
-$a=15; $b=2332124;
-echo "Addition: ".($a+$b)."\n";
-echo "Subtraction: ".($a-$b)."\n";
-echo "Multiplication: ".($a*$b)."\n";
-echo "Division: ".($a/$b)."\n\n";
-
-
-echo "==============================\n";
-echo "ACTIVITY 6: ASSIGNMENT\n";
-echo "==============================\n";
-$x=5; $x+=3;
-echo "Result: $x\n\n";
-
-
-echo "==============================\n";
-echo "ACTIVITY 7: COMPARISON\n";
-echo "==============================\n";
-$a=10; $b=5;
-echo "a > b: "; var_dump($a > $b);
-echo "a == b: "; var_dump($a == $b);
-echo "\n";
-
-
-echo "==============================\n";
-echo "MINI PROJECT: CALCULATOR\n";
-echo "==============================\n";
-$num1=8; $num2=4;
-echo "Sum: ".($num1+$num2)."\n";
-echo "Difference: ".($num1-$num2)."\n";
-echo "Product: ".($num1*$num2)."\n";
-echo "Quotient: ".($num1/$num2)."\n";
-
-echo "</pre>";
+// MINI PROJECT
+echo "<br>MINI PROJECT: CALCULATOR<br>"; 
+$num1 = 8; 
+$num2 = 4; 
+echo "Sum: " . ($num1 + $num2) . "<br>"; 
+echo "Difference: " . ($num1 - $num2) . "<br>"; 
+echo "Product: " . ($num1 * $num2) . "<br>"; 
+echo "Quotient: " . ($num1 / $num2) . "<br>"; 
 ?>
