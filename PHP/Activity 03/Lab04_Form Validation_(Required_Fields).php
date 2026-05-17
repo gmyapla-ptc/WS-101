@@ -14,7 +14,7 @@
 <?php
 //isset name && email
  if(isset($_POST['name']) && isset($_POST['email']))
- <!-- L4 VALIDATION -->
+// L4 VALIDATION -->
  if(empty($_POST["name"])) {
  echo "Name is required";}
  
