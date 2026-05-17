@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <title> ACT 03</title>
+<body>
+<!-- FORMS  -->
+<form method="post" action="">
+
+<!-- name && email -->
+ Name: <input type="text" name="name">
+  <br>
+  Email: <input type="email" name="email">
+  <br>
+  
+<!--GENDER RADIO BUTTON L7 -->
+   Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female <br>
+    
+    
+<!-- L8 DROP DOWN -->
+COURSE : 
+<select name="course">
+<option value="BSIT">BSIT</option>
+<option value="BSOA"> BSOA </option>
+<option value="BSCS">BSCS </option>
+<br>
+</select> <br>
+
+<!--L9 TEXTAREA -->
+ <textarea name="message" rows="5" cols="30"></textarea>
+    <br>
+ <input type="submit">
+</form>
+
+<!--php -->
+<?php
+//isset name && email
+if (isset($_POST['name']) && isset($_POST['email'])) {
+
+    if (empty($_POST["name"])) {
+        echo "Name is required";
+    } 
+    elseif (empty($_POST["email"])) {
+        echo "Email is required <br>";
+    } 
+    elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+    } 
+    else {
+        echo "Hello, " . htmlspecialchars($_POST['name']);
+        echo "<br>";
+        echo "Email: " . htmlspecialchars($_POST['email']);
+        echo "<br>";
+        
+    }
+    
+    
+    
+
+}
+?>
+</body>
+</html>
