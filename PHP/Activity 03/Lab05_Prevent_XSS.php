@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+ <head>
+    <meta charset="UTF-8">
+    <title>XSS Prevention</title>
+ </head>
 <body>
 <!-- FORMS -->
 <form method="post" action="">
@@ -20,6 +24,9 @@
  
  elseif (empty($_POST["email"])) {
  echo "Email is required <br>";
+
+  elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
 
 }
 
