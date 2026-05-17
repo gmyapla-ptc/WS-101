@@ -5,6 +5,8 @@
     <title> ACT 03</title>
   </head> 
 <body>
+
+<!-- FORMS AREA -->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 <!-- name -->
@@ -13,120 +15,141 @@ value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
 <br>
 
 <!-- password -->
-  Password: <input type="password" name="password">
+Password: <input type="password" name="password">
 <br>
 
 <!-- email -->
-  Email: <input type="email" name="email"
-  value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+Email: <input type="email" name="email"
+value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
 <br>
 
 <!-- Gender -->
 Gender:
-    <input type="radio" name="gender" value="Male" <?php if(isset($_POST['gender']) && $_POST['gender'] == "Male") echo "checked"; ?>> Male
-    <input type="radio" name="gender" value="Female" <?php if(isset($_POST['gender']) && $_POST['gender'] == "Female") echo "checked"; ?>> Female <br>
-    
-<!-- textarea -->    
-COURSE : 
+<input type="radio" name="gender" value="Male" <?php if(isset($_POST['gender']) && $_POST['gender'] == "Male") echo "checked"; ?>> Male
+<input type="radio" name="gender" value="Female" <?php if(isset($_POST['gender']) && $_POST['gender'] == "Female") echo "checked"; ?>> Female
+<br>
+
+<!-- COURSE -->
+COURSE:
 <select name="course">
 <option value=""
-    <?php if(!isset($_POST['course']) || $_POST['course'] == "") echo "selected"; ?>
-    >-- Select Course --</option>
+<?php if(!isset($_POST['course']) || $_POST['course'] == "") echo "selected"; ?>
+>-- Select Course --</option>
+
 <option value="BSIT"
-    <?php if(isset($_POST['course']) && $_POST['course'] == "BSIT") echo "selected"; ?>
-    >BSIT</option>
+<?php if(isset($_POST['course']) && $_POST['course'] == "BSIT") echo "selected"; ?>
+>BSIT</option>
+
 <option value="BSOA"
-    <?php if(isset($_POST['course']) && $_POST['course'] == "BSOA") echo "selected"; ?>
-    >BSOA</option>
+<?php if(isset($_POST['course']) && $_POST['course'] == "BSOA") echo "selected"; ?>
+>BSOA</option>
+
 <option value="BSCS"
-    <?php if(isset($_POST['course']) && $_POST['course'] == "BSCS") echo "selected"; ?>
-    >BSCS</option>
-</select> <br>
+<?php if(isset($_POST['course']) && $_POST['course'] == "BSCS") echo "selected"; ?>
+>BSCS</option>
+</select>
+<br>
 
 <!-- textarea -->
- <textarea name="message" rows="5" cols="30"><?php echo isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : ''; ?></textarea>
-    <br>
- <input type="submit">
- 
- <!-- L14 hobby --> 
-   <br><br>Hobbies:
-    <br>
-    <input type="checkbox" name="hobbies[]" value="Reading"> Reading
-    <input type="checkbox" name="hobbies[]" value="Gaming"> Gaming
-    <input type="checkbox" name="hobbies[]" value="Sports"> Sports
-    <input type="checkbox" name="hobbies[]" value="Music"> Music
-    <input type="checkbox" name="hobbies[]" value="ART"> ART
-    <input type="checkbox" name="hobbies[]" value="sleeping"> Sleeping
+<textarea name="message" rows="5" cols="30"><?php echo isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : ''; ?></textarea>
+<br>
 
-    <br><br>
- 
+<!-- hobbies -->
+<br><br>Hobbies:
+<br>
+<input type="checkbox" name="hobbies[]" value="Reading"> Reading
+<input type="checkbox" name="hobbies[]" value="Gaming"> Gaming
+<input type="checkbox" name="hobbies[]" value="Sports"> Sports
+<input type="checkbox" name="hobbies[]" value="Music"> Music
+<input type="checkbox" name="hobbies[]" value="ART"> ART
+<input type="checkbox" name="hobbies[]" value="sleeping"> Sleeping
+<br><br>
+
+<!-- buttons -->
+<input type="submit">
+<input type="reset">
+
 </form>
 
-
 <?php
-//VALIDATION DEPARTMENT
+// VALIDATION DEPARTMENT
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//name
+
+    // name
     if (empty($_POST["name"])) {
         echo "Name is required";
     }
-//password
+
+    // password
     elseif (empty($_POST["password"])) {
         echo "Password is required";
     }
-//email
+
+    // email
     elseif (empty($_POST["email"])) {
         echo "Email is required";
     }
-//email validate @
+
+    // email validation
     elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format";
     }
-//gender
+
+    // gender
     elseif (empty($_POST["gender"])) {
         echo "Gender is required";
     }
-//course
+
+    // course
     elseif (empty($_POST["course"])) {
         echo "Course is required";
     }
-//textarea
+
+    // message
     elseif (empty($_POST["message"])) {
         echo "Message is required";
     }
-//hobby L14
-    elseif (empty($_POST["hobbies"])) {
+
+    // hobbies
+    elseif (!isset($_POST["hobbies"]) || empty($_POST["hobbies"])) {
         echo "Please select at least one hobby";
     }
-    
-    
-    
-// PRINTING AREA
+
+    // OUTPUT SECTION
     else {
-//name
+
+        // name
         echo "Hello, " . htmlspecialchars($_POST['name']);
         echo "<br>";
-//password
+
+        // password
         echo "Password received securely.";
         echo "<br>";
-//email
+
+        // email
         echo "Email: " . htmlspecialchars($_POST['email']);
         echo "<br>";
-//gender
+
+        // gender
         echo "Gender: " . htmlspecialchars($_POST['gender']);
         echo "<br>";
-//course
+
+        // course
         echo "Course: " . htmlspecialchars($_POST['course']);
         echo "<br>";
-//Textarea
+
+        // message
         echo "Message: " . htmlspecialchars($_POST['message']);
-//hobby
+        echo "<br>";
+
+        // hobbies
         echo "Hobbies: <br>";
         foreach ($_POST["hobbies"] as $hobby) {
-        echo "- " . htmlspecialchars($hobby) . "<br>";}
-        
+            echo "- " . htmlspecialchars($hobby) . "<br>";
+        }
     }
 }
 ?>
+
 </body>
 </html>
