@@ -48,7 +48,7 @@ COURSE :
     <br>
  <input type="submit">
  
- <!-- hobby -->
+ <!-- L14 hobby --> 
    <br><br>Hobbies:
     <br>
     <input type="checkbox" name="hobbies[]" value="Reading"> Reading
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     elseif (empty($_POST["message"])) {
         echo "Message is required";
     }
-//hobby
+//hobby L14
     elseif (empty($_POST["hobbies"])) {
         echo "Please select at least one hobby";
     }
