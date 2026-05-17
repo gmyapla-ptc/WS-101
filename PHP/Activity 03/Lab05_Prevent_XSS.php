@@ -31,6 +31,6 @@ else {
 }
 
 ?>
-
+<!-- if the user enter illegal codes like [ <script>alert('XSS')</script>.]  in the input box , the code will treat it like a normal text or string -->
 </body>
 </html>
