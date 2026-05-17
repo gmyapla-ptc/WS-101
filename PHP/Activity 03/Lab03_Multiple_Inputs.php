@@ -2,6 +2,8 @@
 <html>
 <body>
 <!-- FORMS -->
+
+ <!-- L3 ADDED NAME && EMAIL // MULTI INPUTS -->
 <form method="post" action="">
  Name: <input type="text" name="name">
   <br>
