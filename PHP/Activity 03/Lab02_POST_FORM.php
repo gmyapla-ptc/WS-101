@@ -2,6 +2,7 @@
 <html>
 <body>
 <!-- FORMS -->
+ <!-- L2 CHANGED TO POST FORMAT -->
 <form method="post" action="">
  Name: <input type="text" name="name">
   <br>
