@@ -3,6 +3,7 @@
  <head>
     <meta charset="UTF-8">
     <title>XSS Prevention</title>
+ </head>
 <body>
 <!-- FORMS added dropdown options -->
 <form method="post" action="">
