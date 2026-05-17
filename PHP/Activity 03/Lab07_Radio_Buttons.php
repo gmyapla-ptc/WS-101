@@ -2,7 +2,7 @@
 <html>
  <head>
     <meta charset="UTF-8">
-    <title>XSS Prevention</title>
+    <title>ACT 03</title>
 <body>
 <!-- FORMS added gendert -->
 <form method="post" action="">
@@ -10,6 +10,7 @@
   <br>
   Email: <input type="email" name="email">
   <br>
+  <!-- L7 RADIO BUTTON -->
    Gender:
     <input type="radio" name="gender" value="Male"> Male
     <input type="radio" name="gender" value="Female"> Female
