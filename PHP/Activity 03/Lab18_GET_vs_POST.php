@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Lab 18: GET vs POST</title>
+    <title>Lab 18 Activity</title>
 </head>
 <body>
 
-<h1>Lab 18: GET vs POST Comparison</h1>
+    <h5>DEAR MADAM, <br>
+    I am using my company laptop, and with that, I cannot install VS CODE and XAMPP to create a local server. I am using an online compiler to test and display the URL behavior needed for the Lab 18 Activity.</h5>
+    
+    <hr>
+<!-- GET METHOD -->
 
-<hr>
+    <h3>GET Method Testing</h3>
+    <form method="get" action="">
+        Name: <input type="text" name="name_get">
+        <input type="submit" value="Submit GET">
+    </form>
 
-<!-- GET FORM -->
-<h2>GET Form</h2>
-<form method="get" action="">
-    Name: <input type="text" name="name_get">
-    <input type="submit" value="Submit GET">
-</form>
+    <?php 
+    if (!empty($_GET['name_get'])) {
+        echo "<p><strong>Result (GET):</strong> Hello, " . htmlspecialchars($_GET['name_get']) . "</p>";
+    }
+    
+// GET sends data through URL
+// { name_get=YourName } it will look like this at the end of url
+    ?>
 
-<hr>
+    <hr>
 
-<!-- POST FORM -->
-<h2>POST Form</h2>
-<form method="post" action="">
-    Name: <input type="text" name="name_post">
-    <input type="submit" value="Submit POST">
-</form>
+    <h3>POST Method Testing</h3>
+    <form method="post" action="">
+        Name: <input type="text" name="name_post">
+        <input type="submit" value="Submit POST">
+    </form>
 
-<hr>
+    <?php 
+    if (!empty($_POST['name_post'])) {
+        echo "<p><strong>Result (POST):</strong> Hello, " . htmlspecialchars($_POST['name_post']) . "</p>";
+    }
+    // POST sends data hidden (not visible in URL)
+    ?>
+    
+    <br><br>
+<h3>Comparison</h3>
 
-<?php
+<ul>
+    <li>in GET method, data in visible in URL (?name=)</li>
+    <li>in POST method, data hidden is from URL</li>
+    <li>GET method is less secure and mainly used for serches</li>
+    <li>POST is more secure and mainly used for login and other things that need to encypted</li>
+</ul>
 
-// GET RESULTS
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["name_get"])) {
-    echo "<h3>GET Results:</h3>";
-    echo "Name: " . $_GET["name_get"];
-    echo "<br>";
-    echo "URL: " . htmlspecialchars($_SERVER["REQUEST_URI"]);
-    echo "<br>";
-    echo "Notice: Data is visible in the URL!";
-}
-
-// POST RESULTS
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["name_post"])) {
-    echo "<h3>POST Results:</h3>";
-    echo "Name: " . $_POST["name_post"];
-    echo "<br>";
-    echo "URL: " . htmlspecialchars($_SERVER["REQUEST_URI"]);
-    echo "<br>";
-    echo "Notice: Data is NOT visible in the URL!";
-}
-
-?>
 
 </body>
 </html>
