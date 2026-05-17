@@ -54,7 +54,7 @@ COURSE:
 <textarea name="message" rows="5" cols="30"><?php echo isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : ''; ?></textarea>
 <br>
 
-<!-- hobbies -->
+<!-- L14 hobbies -->
 <br><br>Hobbies:
 <br>
 <input type="checkbox" name="hobbies[]" value="Reading"> Reading
@@ -67,7 +67,6 @@ COURSE:
 
 <!-- buttons -->
 <input type="submit">
-<input type="reset">
 
 </form>
 
@@ -110,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Message is required";
     }
 
-    // hobbies
+    // hobbies L14
     elseif (!isset($_POST["hobbies"]) || empty($_POST["hobbies"])) {
         echo "Please select at least one hobby";
     }
@@ -142,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Message: " . htmlspecialchars($_POST['message']);
         echo "<br>";
 
-        // hobbies
+        // hobbies L14
         echo "Hobbies: <br>";
         foreach ($_POST["hobbies"] as $hobby) {
             echo "- " . htmlspecialchars($hobby) . "<br>";
