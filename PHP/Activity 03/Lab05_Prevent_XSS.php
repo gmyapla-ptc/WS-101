@@ -13,7 +13,7 @@
 <!--php -->
 <?php
 //isset name && email
- if(isset($_POST['name']) && isset($_POST['email']))
+ if(isset($_POST['name']) && isset($_POST['email'])) {
  
  if(empty($_POST["name"])) {
  echo "Name is required";}
@@ -29,8 +29,9 @@ else {
         echo "Email: " . htmlspecialchars($_POST['email']);
         echo "<br>";
 }
+}
 
 ?>
-<!-- if the user enter illegal codes like [ <script>alert('XSS')</script>.]  in the input box , the code will treat it like a normal text or string -->
+
 </body>
 </html>
