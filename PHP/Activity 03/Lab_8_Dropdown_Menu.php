@@ -13,7 +13,7 @@
    Gender:
     <input type="radio" name="gender" value="Male"> Male
     <input type="radio" name="gender" value="Female"> Female <br>
-    
+<!-- L8 DROP DOWN MENU -->
 COURSE : 
 <select name="course">
 <option value="BSIT">BSIT</option>
