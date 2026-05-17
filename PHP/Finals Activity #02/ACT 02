@@ -21,18 +21,18 @@ echo "ACTIVITY 3 & 4: VARIABLES<br>";
 // variables 
 $name = "Maria"; 
 $age = 20; 
-// Fixed string concatenation formatting
+// string concatenation formatting echo " [string] ". [variable] . "<br>";
 echo "Name: " . $name . "<br>"; 
 echo "Age: " . $age . "<br>"; 
 
-// Your own custom variables
+// my own custom variables
 $name = "Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas"; 
 $age = 69; 
 echo "<br>Name: $name<br>"; 
 echo "Age: $age<br>"; 
 
 // ACT 05
-echo "<br>ACTIVITY 5: ARITHMETIC<br>"; // Changed \n to <br> for web rendering
+echo "<br>ACTIVITY 5: ARITHMETIC<br>"; 
 $a = 10; 
 $b = 3; 
 echo "Addition: " . ($a + $b) . "<br>"; 
