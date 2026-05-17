@@ -2,7 +2,7 @@
 <html>
  <head>
     <meta charset="UTF-8">
-    <title>XSS Prevention</title>
+    <title>ACT 03n</title>
 </head>
 <body>
 <!-- FORMS -->
@@ -25,6 +25,7 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
     elseif (empty($_POST["email"])) {
         echo "Email is required <br>";
     } 
+    // L6 filter var
     elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format";
     } 
