@@ -20,13 +20,11 @@
     <input type="radio" name="gender" value="Female"> Female <br>
     
     
-<!-- L8 DROP DOWN -->
 COURSE : 
 <select name="course">
 <option value="BSIT">BSIT</option>
 <option value="BSOA"> BSOA </option>
 <option value="BSCS">BSCS </option>
-<br>
 </select> <br>
 
 <!--L9 TEXTAREA -->
