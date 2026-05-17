@@ -3,6 +3,7 @@
  <head>
     <meta charset="UTF-8">
     <title> ACT 03</title>
+  </head> 
 <body>
 <!-- FORMS  -->
 <form method="post" action="">
