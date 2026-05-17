@@ -23,8 +23,8 @@
  echo "Name is required";}
  
  elseif (empty($_POST["email"])) {
- echo "Email is required <br>";
-//L5 PREVENT ILLEGAL BS
+ echo "Email is required <br>";}
+
   elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format";
 
