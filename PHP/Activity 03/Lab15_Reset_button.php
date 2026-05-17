@@ -65,7 +65,7 @@ COURSE:
 <input type="checkbox" name="hobbies[]" value="sleeping"> Sleeping
 <br><br>
 
-<!-- buttons -->
+<!-- L15 RESET buttons -->
 <input type="submit">
 <input type="reset">
 
